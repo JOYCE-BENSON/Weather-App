@@ -4,6 +4,7 @@ import { CommandDialog, CommandEmpty, CommandGroup, CommandInput, CommandItem, C
 import { Loader2, Search } from "lucide-react";
 import { useLocationSearch } from "@/hooks/use-weather";
 import { useNavigate } from "react-router-dom";
+import { useSearchHistory } from "@/hooks/use-search-history";
 
 const CitySearch = () => {
     const [open, setOpen] = useState(false);
@@ -11,6 +12,7 @@ const CitySearch = () => {
     const navigate = useNavigate();
 
     const { data: locations, isLoading } = useLocationSearch(query);
+    const { history, clearHistory, addToHistory } = useSearchHistory();
 
     const handleSelect = (cityData) => {
         const [lat, lon, name, country] = cityData.split("|");
