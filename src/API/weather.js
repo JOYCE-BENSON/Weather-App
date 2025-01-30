@@ -53,6 +53,7 @@ class WeatherAPI {
     });
     return this.fetchData(url);
   }
+
 }
 
 export const weatherAPI = new WeatherAPI();
