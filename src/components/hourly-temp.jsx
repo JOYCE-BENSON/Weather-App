@@ -27,13 +27,13 @@ export default function HourlyTemperature({ data }) {
             <LineChart data={chartData}>
               <XAxis
                 dataKey="time"
-                stroke="#888888"
+                stroke="Blue"
                 fontSize={12}
                 tickLine={false}
                 axisLine={false}
               />
               <YAxis
-                stroke="#888888"
+                stroke="Red"
                 fontSize={12}
                 tickLine={false}
                 axisLine={false}
