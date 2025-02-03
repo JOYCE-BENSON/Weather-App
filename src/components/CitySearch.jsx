@@ -45,7 +45,7 @@ const CitySearch = () => {
                 <CommandInput
                     placeholder="Search Cities..."
                     value={query}
-                    onValueChange={setQuery} // ✅ Fixed: Restored onValueChange
+                    onValueChange={setQuery} 
                 />
                 <CommandList>
                     {query.length > 2 && <CommandEmpty>No cities found.</CommandEmpty>}
