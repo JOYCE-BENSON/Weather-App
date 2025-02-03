@@ -1,3 +1,4 @@
+/* eslint-disable react/prop-types */
 // src/components/weather/favorite-cities.jsx
 import { useNavigate } from "react-router-dom";
 import { useWeatherQuery } from "@/hooks/use-weather";

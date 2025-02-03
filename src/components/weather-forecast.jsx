@@ -4,12 +4,12 @@ import { ArrowDown, ArrowUp, Droplets, Wind } from "lucide-react";
 import { format } from "date-fns";
 
 export function WeatherForecast({ data }) {
-  // Check if data and data.list are available
+ 
   if (!data || !data.list) {
-    return <p>Loading...</p>; // Or any other fallback UI
+    return <p>Loading...</p>; 
   }
 
-  // Group forecast by day and get daily min/max
+  
   const dailyForecasts = data.list.reduce((acc, forecast) => {
     const date = format(new Date(forecast.dt * 1000), "yyyy-MM-dd");
 
