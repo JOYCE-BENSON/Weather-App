@@ -9,7 +9,7 @@ export function useFavorites() {
     queryKey: ["favorites"],
     queryFn: () => favorites,
     initialData: favorites,
-    staleTime: Infinity, // Since we're managing the data in localStorage
+    staleTime: Infinity, 
   });
 
   const addFavorite = useMutation({
@@ -20,7 +20,7 @@ export function useFavorites() {
         addedAt: Date.now(),
       };
 
-      // Prevent duplicates
+      
       const exists = favorites.some((fav) => fav.id === newFavorite.id);
       if (exists) return favorites;
 
@@ -29,7 +29,7 @@ export function useFavorites() {
       return newFavorites;
     },
     onSuccess: () => {
-      // Invalidate and refetch
+      
       queryClient.invalidateQueries({ queryKey: ["favorites"] });
     },
   });
@@ -41,7 +41,7 @@ export function useFavorites() {
       return newFavorites;
     },
     onSuccess: () => {
-      // Invalidate and refetch
+      
       queryClient.invalidateQueries({ queryKey: ["favorites"] });
     },
   });
